@@ -405,33 +405,94 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    body {
+        padding-bottom: 90px;
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 120px;
+        padding-top: 60px;
     }
     
+    .profile-img-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
     .hero-actions {
         justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
     }
     
     .glitch-text {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
+    /* Navigation style "App Mobile" en bas de l'écran */
     .glass-nav {
-        width: 90%;
-        padding: 10px 20px;
+        width: 95%;
+        top: auto;
+        bottom: 20px;
+        padding: 15px 10px;
+        border-radius: 20px;
     }
     
     .glass-nav ul {
-        gap: 15px;
-        justify-content: center;
-        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .glass-nav ul::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .glass-nav a {
+        font-size: 0.75rem;
+        padding: 5px;
+        white-space: nowrap;
     }
     
     .stats {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    /* Amélioration de la section Contact pour mobile */
+    .contact-links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .contact-link {
+        flex-direction: row;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border-radius: 15px;
+        border: 1px solid var(--glass-border);
+    }
+    
+    .timeline-item {
+        padding: 20px;
+    }
+
+    .timeline-dot {
+        left: -26px;
     }
 }
